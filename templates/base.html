@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/register">Register</a> |
+        <a href="/login">Login</a> |
+        <a href="/logout">Logout</a> |
+        <a href="/books">All Books</a> |
+        <a href="/add_book">Add Book</a>
+       
+    </nav>
+    <hr>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p><strong>{{ category }}:</strong> {{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    
+    {% block content %}{% endblock %}
+</body>
+</html>
