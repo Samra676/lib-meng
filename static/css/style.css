@@ -1,0 +1,97 @@
+/* static/css/style.css */
+body {
+    background-image: url("i1.jpg");
+    display: block;
+        font-family: Arial, sans-serif;
+        margin: 100;
+        padding: 20;
+        text-align: center;
+    }
+    
+    header {
+        background-color: #216d21;
+        color: rgb(240, 239, 239);
+        padding: 30px;
+        text-align: center;
+    }
+    
+    nav {
+        background-color: #0e530859;
+        padding: 10px;
+        text-align: center;
+        
+    }
+    
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #0e0d0d;
+        font-weight: bold;
+        text-align: center;
+        
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+        color: #9b1111
+    }
+    
+    .container {
+        padding: 100px;
+    }
+    .welcome-section {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+    table {
+        width: 30%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background: rgb(13, 13, 80);
+        color: #fffafa;
+        
+    }
+    form{
+       display: flexbox;
+       text-align: center;
+       color: rgb(230, 214, 214);
+       text-decoration: none;
+       background: rgb(30, 34, 95);
+       padding: 90px;
+       border-radius: 20px;
+       box-shadow: 0 4px 6px rgba(223, 183, 183, 0.2);
+       align-content: center;
+       margin: auto;
+        width: 20%;
+        height: 90%;
+    }
+    h1 {
+        color: #22185a;
+        font-size: 40px;
+        margin-top: 12%;
+        display: inline-block; /* Ensures the animation applies properly */
+        overflow: hidden; /* Hides the text until it's animated */
+        white-space: nowrap; /* Prevents text wrapping */
+        animation: revealWords 6s steps(3) infinite; /* Animation for 3 words */
+    }
+    
+    /* Define the animation */
+    @keyframes revealWords {
+        0% {
+            width: 0; /* Start with no text visible */
+        }
+        33% {
+            width: 33%; /* Reveal the first word */
+        }
+        66% {
+            width: 66%; /* Reveal the second word */
+        }
+        100% {
+            width: 100%; /* Reveal the entire text */
+        }
+    }
+    
